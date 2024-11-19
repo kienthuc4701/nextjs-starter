@@ -28,6 +28,7 @@ export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
   providers: [
     CredentialsProvider({
+      name: 'Credentials',
       async authorize(credentials) {
         const parsedCredentials = credentialsSchema.safeParse(credentials);
 
